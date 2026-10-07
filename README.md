@@ -45,3 +45,22 @@ och centrala begrepp.
 `git add` och `git commit` arbetar lokalt. En commit skickas till GitHub först
 med `git push`. `git pull` går åt andra hållet: från fjärrrepositoryt till
 det lokala projektet.
+
+## Repository, commit och versionshistorik
+
+Ett **repository**, ofta förkortat repo, är ett projekt vars filer och
+ändringshistorik hanteras av Git. Det finns lokalt på datorn och kan också
+finnas som ett fjärrrepository på GitHub, så att andra kan ta del av arbetet.
+
+En **commit** är en sparad version av de ändringar som valts med `git add`.
+Den har ett eget id och ett meddelande som beskriver ändringen. En commit
+kan till exempel lägga till förklaringarna av Git-kommandon i README.
+
+**Versionshistoriken** är följden av commits. Den visar hur projektet har
+utvecklats, vilka ändringar som hör ihop och när de sparades. Historiken
+går att läsa med `git log` och kan användas för att jämföra versioner eller
+hitta när ett fel infördes.
+
+Små commits med tydliga meddelanden gör historiken lättare att förstå.
+Därför sparas kommandodokumentationen, README-beskrivningen,
+Git-kommandona och begreppsförklaringarna som separata ändringar.
