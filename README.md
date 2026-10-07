@@ -14,6 +14,9 @@ VS Code och dokumentera arbetet med Markdown. Git används för att spara
 - Den här README-filen beskriver övningen, Git-kommandon och centrala begrepp.
 - [DOCS/samarbete.md](DOCS/samarbete.md) förklarar hur ett utvecklingsteam
   använder ett gemensamt repository.
+- [.gitignore](.gitignore) gör att lokala VS Code-inställningar, tillfälliga
+  filer och vissa systemfiler inte läggs till i Git av misstag. Reglerna
+  slutar inte spåra filer som redan finns i Git-historiken.
 
 ## Git-kommandon
 
@@ -42,11 +45,12 @@ VS Code och dokumentera arbetet med Markdown. Git används för att spara
   `git diff --cached` visar de ändringar som har valts till nästa commit.
 - `git config user.name` och `git config user.email` ställer in författarens
   namn och e-post när ett värde anges efter kommandot. Utan `--global` gäller
-  inställningen bara detta repository. Här används GitHubs noreply-adress.
+  inställningen bara detta repository. Den påverkar nya lokala commits,
+  inte redan sparade commits eller commits skapade av GitHub-integrationen.
 
-`git add` och `git commit` arbetar lokalt. En commit skickas till GitHub först
-med `git push`. `git pull` går åt andra hållet: från fjärrrepositoryt till
-det lokala projektet.
+`git add` och `git commit` arbetar lokalt. I ett vanligt arbetsflöde från
+terminalen skickas lokala commits till GitHub med `git push`. `git pull`
+går åt andra hållet: från fjärrrepositoryt till det lokala projektet.
 
 ## Repository, commit och versionshistorik
 
@@ -69,9 +73,19 @@ Git-kommandona och begreppsförklaringarna som separata ändringar.
 
 ## Genomförande och publicering
 
-Mapparna och filerna skapades lokalt, projektet öppnades i VS Code och
-ändringarna sparades i fem separata Git-commits. Terminalens `git push`
-kunde inte autentisera i körmiljön. Därför publicerades motsvarande
-ändringar med GitHub-integrationen, med samma uppdelning och
-commit-meddelanden. En lyckad `git push` från terminalen återstår att
-prova i en miljö med fungerande GitHub-inloggning.
+Kursmappen och projektmappen skapades med Git Bash. Projektmappen,
+kommandofilen och README öppnades med VS Codes startkommando. Texterna
+skrevs med automatiserade filverktyg; redigering inne i VS Code har
+inte verifierats som genomförd.
+
+Grundversionen sparades först lokalt i fem separata Git-commits.
+Terminalens `git push` kunde inte autentisera i körmiljön. Därför
+publicerades motsvarande ändringar med GitHub-integrationen, med samma
+uppdelning och commit-meddelanden. De publicerade commitsen har andra
+id:n och författarinställningar än de lokala ursprungscommitsen.
+`.gitignore` och senare dokumentationsrättningar har egna commits.
+
+Den lokala huvudbranchen har synkroniserats med GitHub, och
+`git pull --ff-only` har körts utan fel. Redigering i VS Code och en
+lyckad `git push` från terminalen återstår att genomföra för att hela
+det praktiska arbetsflödet ska vara verifierat.
