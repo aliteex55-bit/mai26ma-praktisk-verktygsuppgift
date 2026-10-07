@@ -1,0 +1,11 @@
+# Lokala inställningar för VS Code
+.vscode/
+
+# Tillfälliga filer och säkerhetskopior från editorn
+*.tmp
+*~
+
+# Filer som operativsystemet skapar
+.DS_Store
+Thumbs.db
+Desktop.ini
