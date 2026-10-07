@@ -41,7 +41,8 @@ VS Code och dokumentera arbetet med Markdown. Git används för att spara
   uppdaterar den lokala branchen om det går utan att slå ihop två olika
   utvecklingsspår. Om historiken har gått åt olika håll avbryts kommandot.
   Vanlig `git pull` hämtar och integrerar fjärrändringar enligt Git-inställningarna.
-- `git diff` visar ändringar som ännu inte har lagts till med `git add`.
+- `git diff` visar ändringar i spårade filer som ännu inte har valts till
+  nästa commit med `git add`. Nya, ospårade filer visas av `git status`.
   `git diff --cached` visar de ändringar som har valts till nästa commit.
 - `git config user.name` och `git config user.email` ställer in författarens
   namn och e-post när ett värde anges efter kommandot. Utan `--global` gäller
