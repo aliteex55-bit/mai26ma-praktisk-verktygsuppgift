@@ -9,9 +9,11 @@ VS Code och dokumentera arbetet med Markdown. Git används för att spara
 
 ## Projektets innehåll
 
-`mina-bash-kommandon.txt` beskriver terminalkommandon och förklarar filer,
-mappar och sökvägar. Den här README-filen beskriver övningen, Git-kommandon
-och centrala begrepp.
+- [mina-bash-kommandon.txt](mina-bash-kommandon.txt) beskriver terminalkommandon
+  och förklarar filer, mappar och sökvägar.
+- Den här README-filen beskriver övningen, Git-kommandon och centrala begrepp.
+- [DOCS/samarbete.md](DOCS/samarbete.md) förklarar hur ett utvecklingsteam
+  använder ett gemensamt repository.
 
 ## Git-kommandon
 
@@ -64,3 +66,12 @@ hitta när ett fel infördes.
 Små commits med tydliga meddelanden gör historiken lättare att förstå.
 Därför sparas kommandodokumentationen, README-beskrivningen,
 Git-kommandona och begreppsförklaringarna som separata ändringar.
+
+## Genomförande och publicering
+
+Mapparna och filerna skapades lokalt, projektet öppnades i VS Code och
+ändringarna sparades i fem separata Git-commits. Terminalens `git push`
+kunde inte autentisera i körmiljön. Därför publicerades motsvarande
+ändringar med GitHub-integrationen, med samma uppdelning och
+commit-meddelanden. En lyckad `git push` från terminalen återstår att
+prova i en miljö med fungerande GitHub-inloggning.
