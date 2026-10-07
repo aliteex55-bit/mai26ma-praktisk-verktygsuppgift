@@ -1,0 +1,70 @@
+Mina Bash-kommandon
+==================
+
+Övningen använder Git Bash på Windows. Kursmappen heter MAI26MA och
+projektmappen heter praktisk-verktygsuppgift.
+
+Kommandon i arbetsgången
+-----------------------
+
+pwd
+Visar den aktuella mappens fullständiga sökväg. Det används för att
+kontrollera var i filsystemet kommandona körs.
+
+mkdir -p MAI26MA/praktisk-verktygsuppgift
+Skapar kursmappen MAI26MA och projektmappen inuti den. Flaggan -p gör
+att även en saknad överordnad mapp skapas.
+
+cd MAI26MA/praktisk-verktygsuppgift
+Byter aktuell mapp till projektmappen. Efter det gäller relativa
+sökvägar från projektmappen.
+
+touch mina-bash-kommandon.txt
+Skapar en tom textfil. Om filen redan finns uppdateras tidsstämpeln;
+det befintliga innehållet raderas inte.
+
+ls
+Listar synliga filer och mappar i den aktuella mappen. Det används
+för att kontrollera att filen eller mappen finns.
+
+cat mina-bash-kommandon.txt
+Skriver ut textfilens innehåll i terminalen så att det går att läsa
+och kontrollera dokumentationen.
+
+touch README.md
+Skapar README-filen som ska beskriva övningen med Markdown.
+
+mkdir DOCS
+Skapar dokumentationsmappen DOCS i projektmappen.
+
+cd DOCS
+Går in i dokumentationsmappen.
+
+touch samarbete.md
+Skapar Markdown-filen för beskrivningen av repository-samarbete.
+
+cd ..
+Går en nivå upp, från DOCS tillbaka till projektmappen.
+
+VS Code
+-------
+Projektmappen och textfilen öppnas i VS Code. När kommandot code
+finns i terminalens sökväg kan samma sak göras med:
+
+code . mina-bash-kommandon.txt
+
+Punkten betyder aktuell mapp. I den här miljön startades VS Code
+via programmets fullständiga sökväg på Windows.
+
+Filer, mappar och sökvägar
+-------------------------
+En fil innehåller sparad information, till exempel texten i denna fil.
+En mapp samlar filer och andra mappar och hjälper till att ordna dem.
+En sökväg är adressen till en fil eller mapp.
+
+DOCS/samarbete.md är en relativ sökväg från projektmappen. Den börjar
+inte från filsystemets rot, utan utgår från den aktuella mappen.
+
+En absolut sökväg anger hela adressen från roten. I Git Bash på Windows
+kan den börja med /c/Users/, medan motsvarande Windows-sökväg börjar
+med C:\Users\. Kommandot pwd visar den absoluta sökvägen till aktuell mapp.
